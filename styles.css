@@ -5,3 +5,10 @@
     padding: 10px;
 }
 
+.data-types-table th {
+    width: 300px;
+}
+
+.data-types-table td {
+    text-align: center;
+}
