@@ -34,14 +34,14 @@
             <td>function</td>
         </tr>
         <tr>
-            <td>boolean</td>
+            <td>string</td>
             <td>
                 object:<br>
                 - Arrays
             </td>
         </tr>
         <tr>
-            <td>string</td>
+            <td>boolean</td>
             <td>- Objects</td>
         </tr>
         <tr>
@@ -50,5 +50,75 @@
         </tr>
     </table>
 
+    <h2>Primitive Data Types</h2>
+    <hr>
+    <h3>Number</h3>
+    <p>Numbers can be written with or without decimals.</p>
+    <i>Sample Code:</i><br>
+    <div class="codeblock">
+        <code>
+            let withDecimal = 34.12; // with decimal<br>
+            let withoutDecimal = 12; // without decimal
+        </code>
+    </div>
+
+    <script>
+        // -- NUMBER --
+        console.log('-- NUMBERS -- ')
+        let withDecimal = 34.12;
+        let withoutDecimal = 12;
+        console.log(`Data type of 'withDecimal': ${typeof(withDecimal)}`);
+        console.log(`Data type of 'withoutDecimal': ${typeof(withoutDecimal)}`);
+        console.log();
+        console.log();
+    </script>
+
+    <h3>String</h3>
+    <p>
+        A string (or a text string) is a series of characters
+        enclosed with either a single quote (<code>'</code>)
+        or a double quote (<code>"</code>). Backticks (<code>`</code)>)
+        can also be used.
+    </p>
+    <div class="codeblock">
+        <code>
+            let single = 'Single quote'; // string enclosed with 2 single quotes<br>
+            let double = "Double quote"; // string enclosed with 2 double quotes<br>
+            let mix1 = 'There is a pair of "double quoted string" inside this single quoted string';<br>
+            let mix1Alternate = 'There is a pair of \'double quoted string\' inside this single quoted string'; // using escape character<br>
+            let mix2 = "There is a pair of 'double quoted string' inside this double quoted string";<br>
+            let mix2Alternate = "There is a pair of \"double quoted string\" inside this double quoted string"; // using escape character<br>
+            let backticked = `I got a ${single} string`; // getting and adding the string value of `single`
+        </code>
+    </div>
+
+    <script>
+        // -- STRING --
+        console.log('-- STRING --');
+
+        let single = 'Single quote'; // string enclosed with 2 single quotes
+        let double = "Double quote"; // string enclosed with 2 double quotes
+        let mix1 = 'There is a pair of "double quoted string" inside this single quoted string';
+        let mix1Alternate = 'There is a pair of \'double quoted string\' inside this single quoted string'; // using escape character
+        let mix2 = "There is a pair of double quoted string' inside this double quoted string";
+        let mix2Alternate = "There is a pair of \"double quoted string\" inside this double quoted string"; // using escape character
+        let backticked = `I got a ${single} string`; // getting and adding the string value of `single`
+
+        // print data type
+        console.log(`Data type of 'single': ${typeof(single)}`);
+        console.log(`Data type of 'double': ${typeof(double)}`);
+        console.log(`Data type of 'backticked': ${typeof(backticked)}`);
+
+        // print string values
+        console.log(`String value of 'single': ${single}`);
+        console.log(`String value of 'double': ${double}`);
+        console.log(`String value of 'mix1': ${mix1}`);
+        console.log(`String value of 'mix1Alternate': ${mix1Alternate}`);
+        console.log(`String value of 'mix2': ${mix2}`);
+        console.log(`String value of 'mix2Alternate': ${mix2Alternate}`);
+        console.log(`String value of 'backticked': ${backticked}`);
+        console.log();
+        console.log();
+    </script>
 </body>
 </html>
