@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Document Object Model (DOM)</title>
+</head>
+<body>
+    <h1>JavaScript - Document Object Model (DOM)</h1>
+    <hr>
+
+    <h2>Getting and Modifying Elements by ID, Tag Name and Class Name</h2>
+    <p>Getting Tag element</p>
+    <p>Getting Tag element</p>
+    <p>Getting Tag element</p>
+    <span id="uniqueness">Unique?</span><br>
+    <i class="comment">This comment will change</i><br>
+    <i class="comment">This comment will change</i><br>
+    <button onclick="getElemAndModify()">Change contents</button><br><br>
+
+    <script>
+        // -- GETTING ELEMENTS --
+        function getElemAndModify() {
+            // ID
+            document.getElementById('uniqueness').innerHTML = "This is unique";
+
+            // Tag Name
+            let tag = document.getElementsByTagName('p');
+            for(let i = 0; i < tag.length; i++)
+                tag[i].innerHTML = 'Got the tag element(s)';
+            
+            // Class Name
+            let className = document.getElementsByClassName('comment');
+            for(let i = 0; i < className.length; i++)
+                className[i].innerHTML = 'Got the elements with the .comment class';
+        }
+    </script>
+
+
+
+    <h2>Accessing Attributes</h2>
+    <img src="./images/huskypenguin.jpg" id="cute" width="400px" />
+    <button onclick="changeImgSrc()">Transform</button><br><br>
+
+    <script>
+        function changeImgSrc() {
+            document.getElementById('cute').src = './images/corgi.jpg';
+        }
+    </script>
+    
+</body>
+</html>
