@@ -39,13 +39,32 @@
 
 
 
-    <h2>Accessing Attributes</h2>
-    <img src="./images/huskypenguin.jpg" id="cute" width="400px" />
+    <h2>Accessing and Modifying Attributes</h2>
+    <img src="./images/huskypenguin.jpg" id="cute" width="400px" /><br>
     <button onclick="changeImgSrc()">Transform</button><br><br>
 
     <script>
         function changeImgSrc() {
+            // change image source
             document.getElementById('cute').src = './images/corgi.jpg';
+        }
+    </script>
+
+
+    <h2>Accessing and Modifying Styles</h2>
+    <p id="important" style="color:white">This is an important text</p>
+    <p class="info" style="color:red">Some info 1</p>
+    <p class="info" style="color:teal">Some info 2</p>
+    <button onclick="unhide()">Unhide</button><br><br>
+
+    <script>
+        function unhide() {
+            let x = document.getElementById('important');
+            x.style.color = 'black'; // change font color to black
+
+            let y = document.getElementsByClassName('info');
+            for(let i = 0; i < y.length; i++)
+                y[i].style.color = 'gray'; // change font color to gray
         }
     </script>
     
