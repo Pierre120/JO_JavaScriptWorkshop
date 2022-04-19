@@ -6,183 +6,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Data Types</title>
 
-    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>JavaScript Data Types</h1>
-    <hr>
-    <p>
-        JavaScript is a dynamcially typed programming language. Thus,
-        redefining a variable with a different data type is possible.
-    </p>
-    <i>Sample Code:</i><br>
-    <div class="codeblock">
-        <code>
-            let dynamicVar = 'Hi!';<br>
-            dynamicVar = 629; // valid
-        </code>
-    </div>
-
-    <h2>Data Types</h2>
-    <table class="data-types-table">
-        <tr>
-            <th><strong>Primitive Data Types</strong></th>
-            <th><strong>Complex Data Types</strong></th>
-        </tr>
-        <tr>
-            <td>number</td>
-            <td>function</td>
-        </tr>
-        <tr>
-            <td>string</td>
-            <td>
-                object:<br>
-                - Arrays
-            </td>
-        </tr>
-        <tr>
-            <td>boolean</td>
-            <td>- Objects</td>
-        </tr>
-        <tr>
-            <td>undefined</td>
-            <td>- null</td>
-        </tr>
-    </table>
+    <h1>JavaScript - Basic Syntax: Data Types</h1>
 
     <h2>Primitive Data Types</h2>
-    <hr>
-    <h3>Number</h3>
-    <p>Numbers can be written with or without decimals.</p>
-    <i>Sample Code:</i><br>
-    <div class="codeblock">
-        <code>
-            let withDecimal = 34.12; // with decimal<br>
-            let withoutDecimal = 12; // without decimal
-        </code>
-    </div>
-
+    
     <script>
         // -- NUMBER --
-        console.log('-- NUMBERS -- ')
+        document.write('<h3>Number</h3>');
+
         let withDecimal = 34.12;
         let withoutDecimal = 12;
-        console.log(`Data type of 'withDecimal': ${typeof(withDecimal)}`);
-        console.log(`Data type of 'withoutDecimal': ${typeof(withoutDecimal)}`);
-        console.log();
-        console.log();
+
+        // print data type
+        document.write(`Data type of 'withDecimal': ${typeof(withDecimal)}<br>`);
+        document.write(`Data type of 'withoutDecimal': ${typeof(withoutDecimal)}<br>`);
+
+        //print values
+        document.write(`Value of 'withDecimal': ${withDecimal}<br>`);
+        document.write(`Value of 'withoutDecimal': ${withoutDecimal}<br>`);
+        document.write('<br>');
     </script>
 
 
-
-    <h3>String</h3>
-    <p>
-        A string (or a text string) is a series of characters
-        enclosed with either a single quote (<code>'</code>)
-        or a double quote (<code>"</code>). Backticks (<code>`</code>)
-        can also be used.
-    </p>
-    <div class="codeblock">
-        <code>
-            let single = 'Single quote'; // string enclosed with 2 single quotes<br>
-            let double = "Double quote"; // string enclosed with 2 double quotes<br>
-            let mix1 = 'There is a pair of "double quoted string" inside this single quoted string';<br>
-            let mix1Alternate = 'There is a pair of \'double quoted string\' inside this single quoted string'; // using escape character<br>
-            let mix2 = "There is a pair of 'double quoted string' inside this double quoted string";<br>
-            let mix2Alternate = "There is a pair of \"double quoted string\" inside this double quoted string"; // using escape character<br>
-            let backticked = `I got a ${single} string`; // getting and adding the string value of `single`
-        </code>
-    </div>
-
     <script>
         // -- STRING --
-        console.log('-- STRING --');
+        document.write('<h3>String</h3>');
 
         let single = 'Single quote'; // string enclosed with 2 single quotes
         let double = "Double quote"; // string enclosed with 2 double quotes
         let mix1 = 'There is a pair of "double quoted string" inside this single quoted string';
-        let mix1Alternate = 'There is a pair of \'double quoted string\' inside this single quoted string'; // using escape character
+        // using escape character
+        let mix1Alternate = 'There is a pair of \'double quoted string\' inside this single quoted string'; 
         let mix2 = "There is a pair of double quoted string' inside this double quoted string";
-        let mix2Alternate = "There is a pair of \"double quoted string\" inside this double quoted string"; // using escape character
+        // using escape character
+        let mix2Alternate = "There is a pair of \"double quoted string\" inside this double quoted string"; 
         let backticked = `I got a ${single} string`; // getting and adding the string value of `single`
 
         // print data type
-        console.log(`Data type of 'single': ${typeof(single)}`);
-        console.log(`Data type of 'double': ${typeof(double)}`);
-        console.log(`Data type of 'backticked': ${typeof(backticked)}`);
+        document.write(`Data type of 'single': ${typeof(single)}<br>`);
+        document.write(`Data type of 'double': ${typeof(double)}<br>`);
+        document.write(`Data type of 'backticked': ${typeof(backticked)}<br>`);
 
         // print string values
-        console.log(`String value of 'single': ${single}`);
-        console.log(`String value of 'double': ${double}`);
-        console.log(`String value of 'mix1': ${mix1}`);
-        console.log(`String value of 'mix1Alternate': ${mix1Alternate}`);
-        console.log(`String value of 'mix2': ${mix2}`);
-        console.log(`String value of 'mix2Alternate': ${mix2Alternate}`);
-        console.log(`String value of 'backticked': ${backticked}`);
-        console.log();
-        console.log();
+        document.write(`String value of 'single': ${single}<br>`);
+        document.write(`String value of 'double': ${double}<br>`);
+        document.write(`String value of 'mix1': ${mix1}<br>`);
+        document.write(`String value of 'mix1Alternate': ${mix1Alternate}<br>`);
+        document.write(`String value of 'mix2': ${mix2}<br>`);
+        document.write(`String value of 'mix2Alternate': ${mix2Alternate}<br>`);
+        document.write(`String value of 'backticked': ${backticked}<br>`);
+        document.write('<br>');
     </script>
 
 
-
-    <h3>Boolean</h3>
-    <p>Booleans can only have two values: <code>true</code> or <code>false</code>.</p>
-    <i>Sample Code:</i><br>
-    <div class="codeblock">
-        <code>
-            let trueBool = true;<br>
-            let falseBool = false; // valid
-        </code>
-    </div>
-
     <script>
         // -- BOOLEAN --
-        console.log('-- BOOLEAN --');
+        document.write('<h3>Boolean</h3>');
 
         let trueBool = true;
         let falseBool = false;
 
         // print data type
-        console.log(`Data type of 'trueBool': ${typeof(trueBool)}`);
-        console.log(`Data type of 'falseBool': ${typeof(falseBool)}`);
+        document.write(`Data type of 'trueBool': ${typeof(trueBool)}<br>`);
+        document.write(`Data type of 'falseBool': ${typeof(falseBool)}<br>`);
 
         // print values
-        console.log(`Value of 'trueBool': ${trueBool}`);
-        console.log(`Value of 'falseBool': ${falseBool}`);
-		console.log();
-        console.log();
+        document.write(`Value of 'trueBool': ${trueBool}<br>`);
+        document.write(`Value of 'falseBool': ${falseBool}<br>`);
+		document.write('<br>');
+    </script>
+
+    <script>
+        // -- UNDEFINED --
+        document.write('<h3>Undefined</h3>');
+
+        let undefinedVar;
+        let undefinedValue = undefined;
+
+        // print data type
+        document.write(`Data type of 'undefinedVar': ${typeof(undefinedVar)}<br>`);
+        document.write(`Data type of 'undefinedValue': ${typeof(undefinedValue)}<br>`);
+
+        // print values
+        document.write(`Value of 'undefinedVar': ${undefinedVar}<br>`);
+        document.write(`Value of 'undefinedValue': ${undefinedValue}<br>`);
+		document.write('<br><br>');
     </script>
 	
+
 	
+    <h2>Complex Data Types</h2>
+
 	<script>
         // -- FUNCTION --
-        console.log('-- FUNCTION --');
+        document.write('<h3>Function</h3>');
 
         let functionVar = function() {
 			document.write("Hello World!");
 		}
 
         // print data type
-        console.log(`Data type of 'functionVar': ${typeof(functionVar)}`);
+        document.write(`Data type of 'functionVar': ${typeof(functionVar)}<br>`);
 
         // print values
-        console.log(`Value of 'functionVar': ${functionVar}`);
-		console.log();
-        console.log();
+        document.write(`Value of 'functionVar': ${functionVar}<br>`);
+		document.write('<br>');
     </script>
 	
-	
-	<script>
-        // -- PROMPT --
-        console.log('-- PROMPT --');
 
-        let name = prompt('Enter your name:');
+    <script>
+        // -- ARRAY --
+        document.write('<h3>Array</h3>');
 
-        // console output
-        console.log(`Your name is ${name}`);
+        // Arrays can store different data types
+        let arr = [1, 2.5, '3', { fname:"Long", lname:"John"}];
 
-        // HTML output
-        document.write(`<h1>Hello, ${name}!</h1>`);
+        // Can also be declared like this:
+        // let arr = new Array();
+
+        // print data type
+        document.write(`Data type of 'arr': ${typeof(arr)}<br>`);
+
+        // print values
+        document.write(`Value of 'arr': ${arr}<br>`);
+		document.write('<br>');
     </script>
+
+
+    <script>
+        // -- OBJECT --
+        document.write('<h3>Object</h3>');
+
+        // Object declaration
+        let person = { 
+            firstName: "Long", 
+            lastName: "John"
+        };
+
+        // Can add additional properties or methods on the fly
+        person.id = 123456;
+
+        // Can also be declared like this:
+        // let person = new Object();
+
+        // print data type
+        document.write(`Data type of 'person': ${typeof(person)}<br>`);
+
+        // print values
+        document.write("Properties and property values of 'person':<br>");
+        for(let property in person) {
+            document.write(`${property}: ${person[property]}<br>`);
+        }
+		document.write('<br>');
+    </script>
+
+    <script>
+        // -- NULL --
+        document.write('<h3>Null</h3>');
+
+        // variable with `null` value
+        let nullVar = null;
+
+        // print data type
+        document.write(`Data type of 'nullVar': ${typeof(nullVar)}<br>`);
+
+        // print values
+        document.write(`Value of 'nullVar': ${nullVar}<br>`);
+		document.write('<br>');
+    </script>
+    
 </body>
 </html>
