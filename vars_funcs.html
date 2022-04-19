@@ -69,6 +69,48 @@
     </script>
 
 
+    <script>
+        // -- FUNCTIONS --
+        document.write('<h3>Functions</h3>');
+
+        // Declaring a parameterless function
+        /*
+            - uses the `function` reserved word
+            - name of the function
+        */
+        function justWrite() {
+            document.write('Paramaterless function<br>');
+        }
+
+        // Declaring a function with parameters
+        /*
+            - uses the `function` reserved word
+            - name of the function
+            - has parameters (no need to declare)
+
+        */
+        function square(x) {
+            return x*x; // return x**2;
+        }
+
+
+        // -- FUNCTION CALLS -- 
+        // - Invoke the name of the function with parentheses
+        justWrite();
+
+        let num = square(2);
+        document.write(`Function with param returned a value of ${num}<br>`);
+
+
+        // -- ANONYMOUS FUNCTION
+        let cube = function(y) {
+            return y**3;
+        };
+        document.write(`Anonymous function returned a value of ${cube(2)}<br>`);
+
+        document.write('<br>');
+    </script>
+
     <!-- HOISTING -->
     <script>
         // -- HOISTING --
