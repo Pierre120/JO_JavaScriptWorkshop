@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Basic Syntax: Operators, Conditional Statements and Iterative Statements</title>
+</head>
+<body>
+    <h1>JavaScript - Basic Syntax: Operators, Conditional Statements and Iterative Statements</h1>
+    <hr>
+
+    <h2>Operators</h2>
+
+    <script>
+        // -- ARITHMETIC -- 
+        document.write('<h3>Arithemtic</h3>');
+        
+        // Unary
+        let increment = 0;
+        increment++; // unary increment
+        let decrement = 0;
+        --decrement; // unary decrement
+
+        // Binary
+        let sum = 1 + 1; // addtion
+        let difference = 1 - 1; // subtraction
+        let product = 3 * 4; // multiplication
+        let quotient = 7 / 3; // division
+        let modulo = 11 % 2; // modulo
+
+        // Exponent
+        let exponent = 2**4; // exponent
+
+        // try checking the results from each results
+        document.write(`Result value from the operation: ${exponent}<br>`); // insert var here (insert_var_here)
+        document.write('<br>');
+        
+
+
+        
+        // -- ASSIGNMENT --
+        document.write('<h3>Assignment</h3>');
+
+        let assignSum = 3;
+        assignSum += 7;
+
+        let assignDiff = 12;
+        assignDiff -= 8;
+
+        let assignProduct = 8;
+        assignProduct *= 9;
+
+        let assignQuotient = 24;
+        assignQuotient /= 6;
+
+        let assignModulo = 13;
+        assignModulo %= 5;
+
+        let assignExp = 2;
+        assignExp **= 5;
+
+        // try checking the results from each results
+        document.write(`Result value from the operation: ${assignExp}<br>`); // insert var here (insert_var_here)
+        document.write('<br>');
+        
+
+        // -- COMPARISON -- 
+        document.write('<h3>Comparison</h3>');
+
+        // Relational
+        let less = 3 < 5;
+        let great = 9 > 6;
+        let lessEq = 4 <= 4;
+        let greatEq = 7 >= 7;
+        
+        // Equality
+        let equal_1 = 9 == 9; // value only
+        let notEq_1 = 1 != 0; // value only
+        let equal_2 = 5 == '5';  // value only
+        let notEq_2 = 6 != '6';  // value only
+
+        let eqType_1 = '7' === '7'; // type and value
+        let notEqType_1 = 8 !== '8'; // type and value
+        let eqType_2 = 0 === '0'; // type and value
+        let notEqType_2 = 1 !== 1; // type and value
+
+
+
+        // try checking the results from each results
+        document.write(`Result value from the operation: ${notEqType_2}<br>`); // insert var here (insert_var_here)
+        document.write('<br>');
+    </script>
+
+    
+    
+</body>
+</html>
