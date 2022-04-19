@@ -65,6 +65,7 @@
         document.write('<br>');
         
 
+
         // -- COMPARISON -- 
         document.write('<h3>Comparison</h3>');
 
@@ -85,14 +86,152 @@
         let eqType_2 = 0 === '0'; // type and value
         let notEqType_2 = 1 !== 1; // type and value
 
-
-
         // try checking the results from each results
         document.write(`Result value from the operation: ${notEqType_2}<br>`); // insert var here (insert_var_here)
         document.write('<br>');
+
+
+
+        // -- LOGICAL -- 
+        document.write('<h3>Logical</h3>');
+
+        // Relational
+        let and = true && false; // logical AND
+        let or = true || false; // logical OR
+        let not = !true; // logical NOT
+
+        // try checking the results from each results
+        document.write(`Result value from the operation: ${not}<br>`); // insert var here (insert_var_here)
+        document.write('<br>');
     </script>
 
-    
+
+
+    <h2>Conditional Statements</h2>
+
+    <script>
+        // -- CONTROL STATEMENTS -- 
+        document.write('<h3>Control Statements</h3>');
+
+        // if() ...
+        document.write('<h4>If statement</h4>');
+        let someVal_1 = 3; // try changing the value
+
+        // try changing the condition
+        if(someVal_1 === 3) {
+            document.write('Inside `if` block of if statement<br>');
+        }
+        document.write('<br>');
+
+
+        // if-else ...
+        document.write('<h4>If-Else statement</h4>');
+        let someVal_2 = 'hello'; // try changing the value
+
+        // try changing the condition
+        if(someVal_2 === 'Hello') {
+            document.write('Inside `if` block of if-else statement<br>');
+        } else {
+            document.write('Inside `else` block of if-else statement<br>');
+        }
+        document.write('<br>');
+
+
+        // if-elseif-else ...
+        document.write('<h4>If-ElseIf-Else statement</h4>');
+        let someVal_3 = 4; // try changing the value
+
+        // try changing the condition
+        if(someVal_3 >= 18) {
+            document.write('Inside `if` block of if-elseif-else statement<br>');
+        } else if(someVal_3 >= 13) {
+            document.write('Inside `elseif` block of if-elseif-else statement<br>');
+        } else {
+            document.write('Inside `else` block of if-elseif-else statement<br>');
+        }
+        document.write('<br>');
+
+
+        // Ternary operator ...
+        document.write('<h4>Ternary Operator</h4>');
+        let someVal_4 = (69 < 96) ? 69 : 'sixty-nine'; // try changing the condition and values
+        document.write(`Result value from the ternary: ${someVal_4}<br>`);
+        document.write('<br>');
+    </script>
+
+
+
+    <h2>Iterative Statements</h2>
+
+    <script>
+        // -- ITERATIVE STATEMENTS -- 
+        document.write('<h3>Iterative Statements</h3>');
+
+        // while() loop
+        document.write('<h4>While() Loop</h4>');
+        let a = 0;
+        while(a < 10) {
+            document.write(`${a}, `);
+            ++a;
+        }
+        document.write('<br><br>');
+
+
+        // do-while() loop
+        document.write('<h4>Do-While() Loop</h4>');
+        let b = 0;
+        do {
+            document.write(`${b}, `);
+            b++;
+        } while(b < 10);
+        document.write('<br><br>');
+
+
+        // for() loop
+        document.write('<h4>For() Loop</h4>');
+        for(let i = 9; i <= 0; --i) {
+            document.write(`${i}, `);
+        }
+        document.write('<br><br>');
+
+
+        // for/in loop
+        document.write('<h4>For/In Loop</h4>');
+
+        document.write('For/In loop with Array:  ');
+        let arr_1 = [6, 9, 69, 'hi', 'hello'];
+        for(let x in arr_1) {
+            document.write(`${x}, `);
+        }
+        document.write('<br>');
+
+        document.write('For/In loop with Object:  ');
+        let obj_1 = { firstName:"Ronald", lastName:"McDonald"};
+        for(let y in obj_1) {
+            document.write(`${y}, `);
+        }
+        document.write('<br><br>');
+
+        // for/of loop
+        document.write('<h4>For/Of Loop</h4>');
+
+        document.write('For/Of loop with Array:  ')
+        let arr_2 = ['Never', 'Gonna', 'Give', 'You', 'Up'];
+        for(let x of arr_2) {
+            document.write(`${x} `);
+        }
+        document.write('<br><br>');
+
+        // this will not work because `obj_2` is not an iteratable object
+        /*
+        document.write('For/In loop with Object:  ');
+        let obj_2 = { firstName:"Rick", lastName:"Astly"};
+        for(let y of obj_2) {
+            document.write(`${y} `);
+        }
+        document.write('<br><br>');
+        */
+    </script>
     
 </body>
 </html>
