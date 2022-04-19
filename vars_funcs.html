@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Basic Syntax: Variables and Functions</title>
+</head>
+<body>
+    <h1>JavaScript - Basic Syntax: Variables and Functions</h1>
+    <hr>
+
+    <h2>Variables</h2>
+
+    <script>
+        // -- DECLARING VARIABLES --
+        document.write('<h3>Declaring Variables</h3>');
+
+        // declared variables
+        var varDeclared = 'Hello!'; // `var` variable declaration
+        let letDeclared = 5; // `let` variable declaration
+        const CONST_DECLARED = { id: 12345, name: 'Alpha Chupapay' }; // `const` variable declaration
+
+        document.write('var declared variable: ' + varDeclared + '<br>');
+        document.write("let declared variable: " + letDeclared + '<br>');
+        document.write(`const declared variable: ${CONST_DECLARED.id} and ${CONST_DECLARED.name}<br>`);
+
+        // undeclared variable
+        /*
+        undeclaredVariable = 10;
+        document.write(undeclaredVariable); // will throw ReferenceError
+        */
+        document.write('<br>');
+
+        
+        // -- REDECLARING VARIABLES --
+        document.write('<h3>Redeclaring Variables</h3>');
+        
+        var varRedeclare = 'FFFFFF';
+        let letRedeclare = '000000';
+        const constRedeclare = 'F0F0F0';
+
+        // `var`
+        // Variable declared with `var` CAN be redeclared again
+        // in the same scope.
+        document.write(`'var' before redeclaration: ${varRedeclare}<br>`);
+        var varRedeclare = 'White';
+        document.write(`'var' after redeclaration: ${varRedeclare}<br>`);
+
+        // `let`
+        // Variable declared with `let` CAN'T be redeclared again
+        // in the same scope.
+        /*
+        document.write(`'let' before redeclaration: ${letRedeclare}<br>`);
+        let letRedeclare = 'Black';
+        document.write(`'let' after redeclaration: ${letRedeclare}<br>`);
+        */
+
+        // `const`
+        // Variable declared with `const` CAN'T be redeclared again
+        // in the same scope.
+        /*
+        document.write(`'let' before redeclaration: ${constRedeclare}<br>`);
+        const constRedeclare = 'Black';
+        document.write(`'let' after redeclaration: ${constRedeclare}<br>`);
+        */
+
+        document.write('<br>');
+    </script>
+
+
+    <!-- HOISTING -->
+    <script>
+        // -- HOISTING --
+        // Hoisting is JavaScript's default behavior of moving all declarations to the
+        // top of the current scope (to the top of the current script or the current function).
+        console.log('-- HOISTING --');
+
+        // Valid hoisting
+        varHoisting = 'Valid';
+        console.log(`Hoisted 'var' variable: ${varHoisting}`);
+        var varHoisting;
+
+        // Invalid hoistings
+        /*
+        letHoisting = 'Invalid';
+        console.log(`Hoisted 'let' variable: ${letHoisting}`); // will throw ReferenceError
+        let letHoisting;
+        */
+        /*
+        constHoisting = false;
+        console.log(`Hoisted 'const' variable: ${constHoisting}`); // will throw ReferenceError
+        let constHoisting;
+        */
+        /*
+        letHoistInit = 'Invalid';
+        console.log(`Hoisted and initialized 'let' variable: ${letHoisting}`); // will throw ReferenceError
+        let letHoistInit = 'Valid?';
+        */
+        
+        console.log();
+        console.log();
+    </script>
+    
+    <!-- SCOPES -->
+    <script>
+        // -- SCOPES --
+        console.log('-- SCOPES --');
+        
+        console.log('> `var`');
+        // `var` as a global variable
+        var varGlobal = 'global `var`';
+
+        // Value of global variable referenced inside a function
+        function globalVar() { console.log(`Variable declared globally: ${varGlobal}`); }
+        // prints the global value of `varGlobal` while inside a function
+        globalVar();
+        console.log(`Value after calling the function: ${varGlobal}`) // varGlobal = 'global `var`'
+
+        // Redeclaration of global variable inside a function
+        function redeclareVar() {
+            var varGlobal = 123;
+            console.log(`Redeclared global variable inside a function: ${varGlobal}`);
+        }
+        // prints the value of `varGlobal` in `redeclareVar()` function
+        redeclareVar();
+        console.log(`Value after calling the function: ${varGlobal}`) // varGlobal = 'global `var`'
+
+        // Global variable redefined inside a function
+        function redefineVar() {
+            varGlobal = 'new value';
+        }
+        redefineVar();
+        console.log(`Value of global variable redefined inside a function: ${varGlobal}`) // varGlobal = 'new value'
+        console.log();
+
+
+        console.log('> `let`');
+        // `let` as a global variable
+        let letGlobal = 'global `let`';
+
+        // Value of global variable referenced inside a function
+        function globalLet() { console.log(`Variable declared globally: ${letGlobal}`); }
+        // prints the global value of `letGlobal` while inside a function
+        globalLet();
+        console.log(`Value after calling the function: ${letGlobal}`) // letGlobal = 'global `let`'
+
+        // Redeclaration of global variable inside a function
+        function redeclareLet() {
+            let letGlobal = 123;
+            console.log(`Redeclared global variable inside a function: ${letGlobal}`);
+        }
+        // prints the value of `letGlobal` in `redeclareLet()` function
+        redeclareLet();
+        console.log(`Value after calling the function: ${letGlobal}`) // letGlobal = 'global `let`'
+
+        // Global variable redefined inside a function
+        function redefineLet() {
+            letGlobal = 404;
+        }
+        redefineLet();
+        console.log(`Value of global variable redefined inside a function: ${letGlobal}`) // letGlobal = 404
+        console.log();
+
+
+        console.log('> `const`');
+        // `let` as a global variable
+        const constGlobal = 'global `const`';
+
+        // Value of global variable referenced inside a function
+        function globalConst() { console.log(`Variable declared globally: ${constGlobal}`); }
+        // prints the global value of `globalConst` while inside a function
+        globalConst();
+        console.log(`Value after calling the function: ${constGlobal}`) // constGlobal = 'global `const`'
+
+        // Redeclaration of global variable inside a function
+        function redeclareConst() {
+            let constGlobal = 123;
+            console.log(`Redeclared global variable inside a function: ${constGlobal}`);
+        }
+        // prints the value of `constGlobal` in `redeclareConst()` function
+        redeclareLet();
+        console.log(`Value after calling the function: ${constGlobal}`) // constGlobal = 'global `const`'
+
+        // Global variable redefined inside a function
+        // Throws an error. Constants cannot be redefined.
+        /*
+        function redefineLet() {
+            constGlobal = 629;
+        }
+        redefineLet();
+        console.log(`Value of global variable redefined inside a function: ${constGlobal}`) // constGlobal = 629;
+        console.log();
+        */
+    </script>
+</body>
+</html>
