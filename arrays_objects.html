@@ -15,15 +15,17 @@
     <script>
         // -- ARRAYS --
 
-        // Declaration
-        document.write('<h3>Declaration</h3>');
+        // Declaration and Accessing
+        document.write('<h3>Declaration and Accessing</h3>');
         let decArr_1 = new Array();
         let decArr_2 = new Array(3);
         let decArr_3 = [34, 'hey there', 2.5];
 
         document.write(`Type of 'decArr_1': ${typeof decArr_1}<br>`);
         document.write(`Length of 'decArr_2': ${decArr_2.length}<br>`);
-        document.write(`Value of 'decArr_3': ${decArr_3}<br>`);
+        document.write(`Values of 'decArr_3': ${decArr_3}<br>`);
+        document.write(`Accessing index 2 of 'decArr_3': ${decArr_3[2]}<br>`);
+
         document.write('<h3></h3>');
         document.write('<br>');
     </script>
