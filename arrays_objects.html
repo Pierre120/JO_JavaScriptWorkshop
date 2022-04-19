@@ -112,7 +112,21 @@
 
     <script>
         // -- OBJECTS --
-        document.write('<h3></h3>');
+        let person = {
+            firstName: "John", // property
+            lastName: "Doe",   // property
+            shout: function() { alert('AAHHH!!'); } // method
+        }
+
+        // Other valid declaration
+        // let person_2 = new Object;
+
+        // Adding of properties or methods
+        person.id = 6789;
+
+        // Accessing properties or methods
+        document.write(`The person's name is ${person.firstName} ${person['lastName']}<br>`);
+        person.shout(); // calling an object method
         document.write('<br>');
     </script>
     
