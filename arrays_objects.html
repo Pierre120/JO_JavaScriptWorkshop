@@ -15,8 +15,8 @@
     <script>
         // -- ARRAYS --
 
-        // Declaration and Accessing
-        document.write('<h3>Declaration and Accessing</h3>');
+        // Declaration, Accessing, Modifying and Length Property
+        document.write('<h3>Declaration, Accessing, Modifying and Length Property</h3>');
         let decArr_1 = new Array();
         let decArr_2 = new Array(3);
         let decArr_3 = [34, 'hey there', 2.5];
@@ -25,9 +25,86 @@
         document.write(`Length of 'decArr_2': ${decArr_2.length}<br>`);
         document.write(`Values of 'decArr_3': ${decArr_3}<br>`);
         document.write(`Accessing index 2 of 'decArr_3': ${decArr_3[2]}<br>`);
-
-        document.write('<h3></h3>');
+        decArr_3[2] = 'Juliet';
+        document.write(`Modified value at index 2 of 'decArr_3': ${decArr_3[2]}<br>`);
         document.write('<br>');
+
+
+        // Popping
+        document.write('<h3>Popping</h3>');
+        let popArr = ['Apple','Banana','Cranberry'];
+        document.write(`Before pop(): ${popArr}<br>`);
+        popArr.pop(); // removes the last element `Cranberry`
+        document.write(`After pop(): ${popArr}<br>`);
+        document.write('<br>');
+
+
+        // Pushing
+        document.write('<h3>Pushing</h3>');
+        let pushArr = ['Apple','Banana','Cranberry'];
+        document.write(`Before push(): ${pushArr}<br>`);
+        pushArr.push('Dalandan'); // adds as last element
+        document.write(`After push(): ${pushArr}<br>`);
+        document.write('<br>');
+
+
+        // Shifting
+        document.write('<h3>Shifting</h3>');
+        let shiftArr = ['Apple','Banana','Cranberry'];
+        document.write(`Before shift(): ${shiftArr}<br>`);
+        shiftArr.shift(); // removes first element
+        document.write(`After shift(): ${shiftArr}<br>`);
+        document.write('<br>');
+
+
+        // Unshifting
+        document.write('<h3>Unshifting</h3>');
+        let unshiftArr = ['Apple','Banana','Cranberry'];
+        document.write(`Before unshift(): ${unshiftArr}<br>`);
+        unshiftArr.unshift('Yum'); // adds as first element
+        document.write(`After unshift(): ${unshiftArr}<br>`);
+        document.write('<br>');
+
+
+        // Concatenating
+        document.write('<h3>Concatenating</h3>');
+        let arr_1 = ['Apple','Banana','Cranberry'];
+        let arr_2 = ['Dalandan','Guyabano'];
+        let arr_3 = ['Jackfruit','Kiwi'];
+        let concatArr_1 = arr_1.concat(arr_2);
+        let concatArr_2 = arr_1.concat(arr_2, arr_3);
+        document.write(`Values of 'arr_1': ${arr_1}<br>`);
+        document.write(`Values of 'arr_2': ${arr_2}<br>`);
+        document.write(`Values of 'arr_3': ${arr_3}<br>`);
+        document.write(`Values of 'concatArr_1': ${concatArr_1}<br>`);
+        document.write(`Values of 'concatArr_2': ${concatArr_2}<br>`);
+        document.write('<br>');
+
+        // Splicing
+        document.write('<h3>Splicing</h3>');
+        let spArr = ['Apple','Banana','Cranberry'];
+        document.write(`Before splicing: ${spArr}<br>`);
+        spArr.splice(2, 1, 'Dalandan', 'Guyabano'); // returns new array with 'Cranberry' removed, and
+                                                    // 'Dalandan' and 'Guyabano' are added
+        document.write(`After splicing: ${spArr}<br>`);
+
+        document.write(`Before splicing: ${spArr}<br>`);
+        spArr.splice(1,1); // removes 'Banana'
+        document.write(`After splicing: ${spArr}<br>`);
+        document.write('<br>');
+
+
+        // Slicing
+        document.write('<h3>Slicing</h3>');
+        let slArr = ['Apple','Banana','Cranberry'];
+        document.write(`Before slicing: ${slArr}<br>`);
+        let sliced_1 = slArr.slice(1); // returns new array with 'Apple' sliced out
+        document.write(`After slicing: ${slArr}<br>`);
+        document.write(`1st Sliced string: ${sliced_1}<br>`);
+
+        let sliced_2 = slArr.slice(1,2); // returns new array with only 'Banana'
+        document.write(`2nd Sliced string: ${sliced_2}<br>`);
+        document.write('<br><br>');
     </script>
 
 
