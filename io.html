@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript - Basic Syntax: I/Os</h1>
+    <hr>
+
+    <h2>Inputs</h2>
+
+    <script>
+        // -- INPUT USING PROMPT() --
+        document.write('<h3>Input using prompt</h3>');
+
+        let name = prompt('Enter your name:');
+
+        // console output
+        document.write(`Your name is ${name}`);
+
+        // HTML output
+        document.write(`<h4>Hello, ${name}!</h4><br>`);
+    </script>
+
+
+
+    <h3>Input via HTML Forms</h3>
+    <form>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname">
+        <br><br>
+        <input type="button" value="Submit"
+        onclick="alertName()" />
+    </form><br><br>
+
+    <script>
+        // -- INPUT VIA HTML FORMS --
+
+        function alertName() {
+        let firstName = document.getElementById("fname").value;
+        let lastName = document.getElementById("lname").value;
+        alert(`Hello, ${firstName} ${lastName}!`);
+        }
+    </script>
+
+
+
+    <h2>Outputs</h2>
+
+    <script>
+        document.write('<h3>Output via Console</h3>');
+        document.write('Check the console of your browser under developer tools<br><br>');
+        // console output
+        console.log('Printed in the console');
+
+        document.write('<h3>Output using DOM (Document Object Model)</h3>');
+        // using DOM
+        document.write('This is printed directly on the HTML document');
+        document.write('<br><br>');
+    </script>
+
+</body>
+</html>
