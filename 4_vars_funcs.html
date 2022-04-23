@@ -27,8 +27,8 @@
 
         // undeclared variable
         /*
-        undeclaredVariable = 10;
-        document.write(undeclaredVariable); // will throw ReferenceError
+        hello = 10;
+        document.write(hello); // will throw ReferenceError
         */
         document.write('<br>');
 
@@ -65,6 +65,9 @@
         document.write(`'let' after redeclaration: ${constRedeclare}<br>`);
         */
 
+        let var1 = 123;
+        var1 = 'string';
+
         document.write('<br>');
     </script>
 
@@ -98,7 +101,7 @@
         // - Invoke the name of the function with parentheses
         justWrite();
 
-        let num = square(2);
+        let num = square(2); // 4
         document.write(`Function with param returned a value of ${num}<br>`);
 
 
@@ -109,6 +112,11 @@
         document.write(`Anonymous function returned a value of ${cube(2)}<br>`);
 
         document.write('<br>');
+
+        let squareVar = square;
+
+        console.log(typeof(squareVar));
+        console.log(squareVar(2));  
     </script>
 
     <!-- HOISTING -->

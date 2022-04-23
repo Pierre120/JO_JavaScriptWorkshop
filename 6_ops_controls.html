@@ -79,7 +79,7 @@
         let equal_1 = 9 == 9; // value only
         let notEq_1 = 1 != 0; // value only
         let equal_2 = 5 == '5';  // value only
-        let notEq_2 = 6 != '6';  // value only
+        let notEq_2 = 6 != '6';  // value only // false
 
         let eqType_1 = '7' === '7'; // type and value
         let notEqType_1 = 8 !== '8'; // type and value
@@ -87,7 +87,7 @@
         let notEqType_2 = 1 !== 1; // type and value
 
         // try checking the results from each results
-        document.write(`Result value from the operation: ${notEqType_2}<br>`); // insert var here (insert_var_here)
+        document.write(`Result value from the operation: ${eqType_2}<br>`); // insert var here (insert_var_here)
         document.write('<br>');
 
 
@@ -151,6 +151,16 @@
         }
         document.write('<br>');
 
+        let num = 5; 
+
+        switch(num) { //===
+            case '5':
+                console.log('String'); break;
+            case 5:
+                console.log('Number'); break;
+                
+        }
+
 
         // Ternary operator ...
         document.write('<h4>Ternary Operator</h4>');
@@ -196,12 +206,13 @@
 
 
         // for/in loop
+        // index / property
         document.write('<h4>For/In Loop</h4>');
 
         document.write('For/In loop with Array:  ');
-        let arr_1 = [6, 9, 69, 'hi', 'hello'];
+        let arr_1 = [6, 9, 69, 'hi', 'hello']; // index
         for(let x in arr_1) {
-            document.write(`${x}, `);
+            document.write(`${x}, `); // 6, 9, 69, hi ??
         }
         document.write('<br>');
 
@@ -213,24 +224,25 @@
         document.write('<br><br>');
 
         // for/of loop
+        // values
         document.write('<h4>For/Of Loop</h4>');
 
         document.write('For/Of loop with Array:  ')
         let arr_2 = ['Never', 'Gonna', 'Give', 'You', 'Up'];
         for(let x of arr_2) {
-            document.write(`${x} `);
+            document.write(`${x} `); // 0, 1 ,2
         }
         document.write('<br><br>');
 
-        // this will not work because `obj_2` is not an iteratable object
-        /*
+        // this will not work because `obj_2` is not an iterable object
+        //*
         document.write('For/In loop with Object:  ');
         let obj_2 = { firstName:"Rick", lastName:"Astly"};
         for(let y of obj_2) {
             document.write(`${y} `);
         }
         document.write('<br><br>');
-        */
+        //*/
     </script>
     
 </body>

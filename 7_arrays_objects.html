@@ -78,6 +78,8 @@
         document.write(`Values of 'arr_3': ${arr_3}<br>`);
         document.write(`Values of 'concatArr_1': ${concatArr_1}<br>`);
         document.write(`Values of 'concatArr_2': ${concatArr_2}<br>`);
+        document.write(`Values of 'arr_1': ${arr_1}<br>`);
+        document.write(`Values of 'arr_2': ${arr_2}<br>`);
         document.write('<br>');
 
         // Splicing
@@ -86,11 +88,15 @@
         document.write(`Before splicing: ${spArr}<br>`);
         spArr.splice(2, 1, 'Dalandan', 'Guyabano'); // returns new array with 'Cranberry' removed, and
                                                     // 'Dalandan' and 'Guyabano' are added
+        /*
+            splice(index, #elem_to_remove, val1, ...);
+        */                                                    
         document.write(`After splicing: ${spArr}<br>`);
 
         document.write(`Before splicing: ${spArr}<br>`);
         spArr.splice(1,1); // removes 'Banana'
         document.write(`After splicing: ${spArr}<br>`);
+        console.log(spArr);
         document.write('<br>');
 
 
@@ -99,10 +105,16 @@
         let slArr = ['Apple','Banana','Cranberry'];
         document.write(`Before slicing: ${slArr}<br>`);
         let sliced_1 = slArr.slice(1); // returns new array with 'Apple' sliced out
+        // slice(starting_ind)
         document.write(`After slicing: ${slArr}<br>`);
         document.write(`1st Sliced string: ${sliced_1}<br>`);
 
         let sliced_2 = slArr.slice(1,2); // returns new array with only 'Banana'
+        // slice(starting_ind, end-ind) // end_ind not included
+        let arr3 = [1, 2, 3, 4, 5];
+                //  0  1  2  3  4
+        console.log(arr3.slice(1, 4)); // 1 2 3
+
         document.write(`2nd Sliced string: ${sliced_2}<br>`);
         document.write('<br><br>');
     </script>
