@@ -29,6 +29,11 @@
         document.write(`Modified value at index 2 of 'decArr_3': ${decArr_3[2]}<br>`);
         document.write('<br>');
 
+        // Length
+        decArr_3[decArr_3.length] = 'out of bounds? NO';
+        console.log(decArr_3);
+        decArr_3[5] = 'out of bounds? STILL NO'
+
 
         // Popping
         document.write('<h3>Popping</h3>');
